@@ -4,5 +4,19 @@
 
 for f in $@
 do
-    echo "Converting $f to $f.ogg"
+    OUTFILE=${f:0:-4}
+    echo "Convert $f to $OUTFILE.ogg"
+    while true
+    do
+        read -p "Do you wish to continue? (y/n) " ANSWER
+        case $ANSWER in
+            [yY]* ) echo "Convert file."
+                    break;;
+
+            [nN]* ) echo "Skipped file $f"
+                    break;;
+
+            * )     echo "Please enter a valid option."
+        esac
+    done
 done
