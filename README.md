@@ -11,7 +11,9 @@ You can run the command as follows:
 $ ./ogg-converter.sh path/to/music/*.mp3
 ```
 
-This will convert all MP3 files in this directory into OGG (I might end up making this more user friendly if I get around to it).
+This will convert all MP3 files in this directory into OGA (I might end up making this more user friendly if I get around to it).
+
+**NOTICE:** For some reason bash doesn't like it if the files have a space character. So if you're a dumb ass who likes using spaces in file names, you're going to have to change that bad habit.
 
 ### License
 This script is licensed with the [GNU GPLv3](/LICENSE).
