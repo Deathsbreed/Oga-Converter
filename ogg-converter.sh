@@ -10,7 +10,7 @@ do
     do
         read -p "Do you wish to continue? (y/n) " ANSWER
         case $ANSWER in
-            [yY]* ) echo "Convert file."
+            [yY]* ) ffmpeg -loglevel warning -i $f $OUTFILE.ogg
                     break;;
 
             [nN]* ) echo "Skipped file $f"
